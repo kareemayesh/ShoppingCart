@@ -14,6 +14,10 @@ class DownloadableProductsMigration extends Migration
     {
         Schema::create('DownloadableProducts', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->float('price');
+            $table->mediumText('link');
+            $table->mediumText('description');
             $table->timestamps();
         });
     }
